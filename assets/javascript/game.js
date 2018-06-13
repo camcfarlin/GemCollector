@@ -3,10 +3,10 @@
 // winningNumber (random number 30-150)
 // runningNumber (users score added per the buttons)
 // Document Ready - Assign winningNumber and 4 gem numbers
-var gem1 = Math.floor(Math.random()*10+1);
-var gem2 = Math.floor(Math.random()*10+1);
-var gem3 = Math.floor(Math.random()*10+1);
-var gem4 = Math.floor(Math.random()*10+1);
+var gem1 = Math.floor(Math.random()*10+3);
+var gem2 = Math.floor(Math.random()*10+3);
+var gem3 = Math.floor(Math.random()*10+3);
+var gem4 = Math.floor(Math.random()*10+3);
 
 var winningNumber = Math.floor(Math.random()*131+29);
 console.log(winningNumber);
@@ -17,10 +17,10 @@ var loses = 0;
 function reset(){
     winningNumber = Math.floor(Math.random()*131+29);
     $('#randomNumber').text(winningNumber);
-    gem1 = Math.floor(Math.random()*10+1);
-    gem2 = Math.floor(Math.random()*10+1);
-    gem3 = Math.floor(Math.random()*10+1);
-    gem4 = Math.floor(Math.random()*10+1);
+    gem1 = Math.floor(Math.random()*10+3);
+    gem2 = Math.floor(Math.random()*10+3);
+    gem3 = Math.floor(Math.random()*10+3);
+    gem4 = Math.floor(Math.random()*10+3);
     runningNumber = 0;
    $('#finalTotal').text(runningNumber);
     } 
@@ -38,6 +38,7 @@ $('#gemOne').on ('click', function(){
     // winScore & loseScore - if/else statment 
     // if runningNumber === winningNumber set win  - tally win
         if (runningNumber === winningNumber){
+            alert ( 'You Win!' );
             wins++; 
             $('#numberWins').text(wins);
             reset();
@@ -51,8 +52,68 @@ $('#gemOne').on ('click', function(){
         }   
   })  
 
+  $('#gemTwo').on ('click', function(){
+    runningNumber += gem2;
+     console.log("NewrunningNumber = " +runningNumber);
+     $('#finalTotal').text(runningNumber); 
+     // winScore & loseScore - if/else statment 
+     // if runningNumber === winningNumber set win  - tally win
+         if (runningNumber === winningNumber){
+            alert ( 'You Win!' );
+             wins++; 
+             $('#numberWins').text(wins);
+             reset();
+         }
+     // if over stop and start again - tally lost
+         else if (runningNumber > winningNumber){
+             alert ("You lose!");
+             loses++;
+             $('#numberLosses').text(loses);
+             reset()
+         }   
+   }) 
 
+   $('#gemThree').on ('click', function(){
+    runningNumber += gem3;
+     console.log("NewrunningNumber = " +runningNumber);
+     $('#finalTotal').text(runningNumber); 
+     // winScore & loseScore - if/else statment 
+     // if runningNumber === winningNumber set win  - tally win
+         if (runningNumber === winningNumber){
+            alert ( 'You Win!' );
+             wins++; 
+             $('#numberWins').text(wins);
+             reset();
+         }
+     // if over stop and start again - tally lost
+         else if (runningNumber > winningNumber){
+             alert ("You lose!");
+             loses++;
+             $('#numberLosses').text(loses);
+             reset()
+         }   
+   }) 
 
+   $('#gemFour').on ('click', function(){
+    runningNumber += gem4;
+     console.log("NewrunningNumber = " +runningNumber);
+     $('#finalTotal').text(runningNumber); 
+     // winScore & loseScore - if/else statment 
+     // if runningNumber === winningNumber set win  - tally win
+         if (runningNumber === winningNumber){
+            alert ( 'You Win!' );
+             wins++; 
+             $('#numberWins').text(wins);
+             reset();
+         }
+     // if over stop and start again - tally lost
+         else if (runningNumber > winningNumber){
+             alert ("You lose!");
+             loses++;
+             $('#numberLosses').text(loses);
+             reset()
+         }   
+   }) 
 
 // else runningNumber > winningNumber set lose - tally lose
 
