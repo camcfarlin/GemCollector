@@ -1,0 +1,27 @@
+
+h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    color: fuchsia;
+}
+body {
+    font-family: 'Kalam', cursive;
+    text-align: center;
+    background-image: url("../images/cave.png");
+}   
+
+#randomNumber  {
+    font-size: 60px;
+    color: crimson;
+}
+
+#finalTotal     {
+    font-size: 60px;
+    color: crimson;
+}
+
+#one, #four {
+    width: 170px;
+}
