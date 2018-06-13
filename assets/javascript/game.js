@@ -3,10 +3,10 @@
 // winningNumber (random number 30-150)
 // runningNumber (users score added per the buttons)
 // Document Ready - Assign winningNumber and 4 gem numbers
-var gem1 = Math.floor(Math.random()*10+3);
-var gem2 = Math.floor(Math.random()*10+3);
-var gem3 = Math.floor(Math.random()*10+3);
-var gem4 = Math.floor(Math.random()*10+3);
+var gem1 = Math.floor(Math.random()*10+1);
+var gem2 = Math.floor(Math.random()*10+1);
+var gem3 = Math.floor(Math.random()*10+1);
+var gem4 = Math.floor(Math.random()*10+1);
 
 var winningNumber = Math.floor(Math.random()*131+29);
 console.log(winningNumber);
@@ -17,10 +17,10 @@ var loses = 0;
 function reset(){
     winningNumber = Math.floor(Math.random()*131+29);
     $('#randomNumber').text(winningNumber);
-    gem1 = Math.floor(Math.random()*10+3);
-    gem2 = Math.floor(Math.random()*10+3);
-    gem3 = Math.floor(Math.random()*10+3);
-    gem4 = Math.floor(Math.random()*10+3);
+    gem1 = Math.floor(Math.random()*10+1);
+    gem2 = Math.floor(Math.random()*10+1);
+    gem3 = Math.floor(Math.random()*10+1);
+    gem4 = Math.floor(Math.random()*10+1);
     runningNumber = 0;
    $('#finalTotal').text(runningNumber);
     } 
@@ -114,10 +114,39 @@ $('#gemOne').on ('click', function(){
              reset()
          }   
    }) 
-
 // else runningNumber > winningNumber set lose - tally lose
 
 // reset game - reassign numbers and reiterate game again
 
 
 //    })  
+
+var modal = document.getElementById('simpleModal');
+// Get open modal button
+var modalBtn = document.getElementById('modalBtn');
+// Get close button
+var closeBtn = document.getElementsByClassName('closeBtn')[0];
+
+// Listen for open click
+modalBtn.addEventListener('click', openModal);
+// Listen for close click
+closeBtn.addEventListener('click', closeModal);
+// Listen for outside click
+window.addEventListener('click', outsideClick);
+
+// Function to open modal
+function openModal(){
+  modal.style.display = 'block';
+}
+
+// Function to close modal
+function closeModal(){
+  modal.style.display = 'none';
+}
+
+// Function to close modal if outside click
+function outsideClick(e){
+  if(e.target == modal){
+    modal.style.display = 'none';
+  }
+}
