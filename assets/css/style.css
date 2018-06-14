@@ -5,7 +5,7 @@ h1 {
     font-weight: bold;
     text-align: center;
     color: fuchsia;
-    text-shadow: 6px 6px 0px rgb(27, 11, 63);
+    text-shadow: 3px 3px 0px rgb(27, 11, 63);
  
 }
 
@@ -23,7 +23,7 @@ body {
     text-align: center;
     background-image: url("../images/cave.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 104%;
 }   
 
 #randomNumber  {
@@ -49,9 +49,12 @@ body {
 
 #one, #two, #three, #four {
     width: 40%;
-    background: 
 }
 
+#iconRG, #iconGG, #iconWG, #iconBG {
+    width: 40px;
+    margin: 0 30px;
+}
 #numberWins, #numberLosses, h2 {
     color: cyan;
 }
@@ -65,7 +68,7 @@ p {
 MODAL
 ********************/
 .button{
-    background: black;
+    background:blue;
     font-size: 20px;
     float: right;
     color:#fff;
@@ -91,7 +94,7 @@ MODAL
   }
   
   .modal-content{
-    background-color:#f4f4f4;
+    background-color: lightslategray;
     margin: 20% auto;
     width:50%;
     animation-name:modalopen;
